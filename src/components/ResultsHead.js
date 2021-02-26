@@ -5,9 +5,7 @@ import "../App.css";
 
 const ResultsHead = () => {
     return (
-        <div className="Results">
-            <table>
-                <thead>
+                <thead className="Results">
                     <tr>
                         <th>Image</th>
                         <th>Name</th>
@@ -16,8 +14,6 @@ const ResultsHead = () => {
                         <th>DOB</th>
                     </tr>
                 </thead>
-            </table>
-        </div>
     )
     
 }
