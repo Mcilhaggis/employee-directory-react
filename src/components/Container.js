@@ -51,7 +51,9 @@ class Container extends Component {
         return (<div>
             <Header />
             <Form 
+            // passing in the updateUsers function to be used in the form component
             updateUsers={this.updateUsers}
+            //passing in the users to the form component
             user={this.state.user}/>
             <div className='container'>
                 <table className="table">
