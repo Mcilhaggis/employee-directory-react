@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import "./style.css";
 
 //the curly braces takes things from the state and passes them into the props/ into the components
 

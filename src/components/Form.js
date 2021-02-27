@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import "./style.css";
 
 
 function Form({updateUsers, user}) {
@@ -20,7 +21,7 @@ function Form({updateUsers, user}) {
 
 
     return (
-        <div className="Form">
+        <div className="form">
             <form>
                 {/* add the call to the function above here */}
                 <input type="text" className="searchButton" onChange={handleInputChange}></input>

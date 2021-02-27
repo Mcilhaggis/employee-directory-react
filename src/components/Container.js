@@ -4,6 +4,8 @@ import Header from "./Header.js";
 import Form from "./Form.js";
 import ResultsHead from "./ResultsHead.js";
 import ResultsBody from "./ResultsBody.js";
+import "./style.css";
+
 
 
 class Container extends Component {
@@ -47,21 +49,6 @@ class Container extends Component {
         this.setState({ user: users });
     }
 
-
-    // sortByName = () => {
-    //     const sortedUsers = this.state.user.sort((a,b) => {
-    //         if(a.name.first < b.name.first){
-    //             return -1;
-    //         }
-    //         if(a.name.first > b.name.first){
-    //             return 1;
-    //         }
-    //     });
-    //     // this.setState({ user: sortedUsers });
-    //     this.setState((state, props) => ({
-    //         users: sortedUsers
-    //     }))
-    // }
     sortByName = () => {
         this.setState({
             users: this.state.order 

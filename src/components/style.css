@@ -1,0 +1,29 @@
+
+body{
+    background: #d0e8f2
+}
+.header{
+    background: #456268;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 10px solid #79a3b1;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    text-align: center;
+}
+
+
