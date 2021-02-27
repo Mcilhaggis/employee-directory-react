@@ -22,7 +22,7 @@ function Form({updateUsers, user}) {
     return (
         <div className="Form">
             <form>
-                {/* add the call to the funciton above here */}
+                {/* add the call to the function above here */}
                 <input type="text" className="searchButton" onChange={handleInputChange}></input>
             </form>
         </div>

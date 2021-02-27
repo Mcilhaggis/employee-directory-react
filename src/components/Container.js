@@ -46,6 +46,13 @@ class Container extends Component {
         this.setState({ user: users });
     }
 
+
+    sortByName = (users) => {
+        this.setState({ user: users });
+
+
+    }
+
     render() {
 
         return (<div>
@@ -57,7 +64,8 @@ class Container extends Component {
             user={this.state.user}/>
             <div className='container'>
                 <table className="table">
-                    <ResultsHead />
+                    <ResultsHead 
+                    sortByName={this.sortByName}/>
 
                     <tbody>
                         {this.state.user.map((users, id) => (
