@@ -14,7 +14,8 @@ class Container extends Component {
         super();
         this.state = {
             user: [],
-            error: null
+            error: null,
+            order: true
         }
     }
     //setting the loading state to true and running the api call
@@ -47,10 +48,86 @@ class Container extends Component {
     }
 
 
-    sortByName = (users) => {
-        this.setState({ user: users });
+    // sortByName = () => {
+    //     const sortedUsers = this.state.user.sort((a,b) => {
+    //         if(a.name.first < b.name.first){
+    //             return -1;
+    //         }
+    //         if(a.name.first > b.name.first){
+    //             return 1;
+    //         }
+    //     });
+    //     // this.setState({ user: sortedUsers });
+    //     this.setState((state, props) => ({
+    //         users: sortedUsers
+    //     }))
+    // }
+    sortByName = () => {
+        this.setState({
+            users: this.state.order 
+            ? this.state.user.sort((a,b) => {
+            if(a.name.first < b.name.first) return -1;
+            if(a.name.first > b.name.first) return 1;
+            return 0;
+        })
+            : this.state.users.reverse((a,b) => {
+                if(a.name.first < b.name.first) return 1;
+                if(a.name.first > b.name.first) return -1;
+                return 0;
+            }),
+            order: !this.state.order
+        })
+    }
 
+    sortByPhone = () => {
+        this.setState({
+            users: this.state.order 
+            ? this.state.user.sort((a,b) => {
+            if(a.cell < b.cell) return -1;
+            if(a.cell > b.cell) return 1;
+            return 0;
+        })
+            : this.state.users.reverse((a,b) => {
+                if(a.cell < b.cell) return 1;
+                if(a.cell > b.cell) return -1;
+                return 0;
+            }),
+            order: !this.state.order
+        })
+    }
 
+    sortByEmail = () => {
+        this.setState({
+            users: this.state.order 
+            ? this.state.user.sort((a,b) => {
+            if(a.email < b.email) return -1;
+            if(a.email > b.email) return 1;
+            return 0;
+        })
+            : this.state.users.reverse((a,b) => {
+                if(a.email < b.email) return 1;
+                if(a.email > b.email) return -1;
+                return 0;
+            }),
+            order: !this.state.order
+        })
+    }
+
+    sortByDob = () => {
+        this.setState({
+            users: this.state.order 
+            ? this.state.user.sort((a,b) => {
+            if(a.dob < b.dob) return -1;
+            if(a.dob > b.dob) return 1;
+            return 0;
+        })
+            : this.state.users.reverse((a,b) => {
+                if(a.dob < b.dob) return 1;
+                if(a.dob > b.dob) return -1;
+                return 0;
+            }),
+            order: !this.state.order
+        })
     }
 
     render() {
@@ -65,7 +142,11 @@ class Container extends Component {
             <div className='container'>
                 <table className="table">
                     <ResultsHead 
-                    sortByName={this.sortByName}/>
+                    sortByName={this.sortByName}
+                    sortByPhone={this.sortByPhone}
+                    sortByEmail={this.sortByEmail}
+                    sortByDob={this.sortByDob}
+                    />
 
                     <tbody>
                         {this.state.user.map((users, id) => (
