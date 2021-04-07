@@ -37,15 +37,6 @@ randomuser.me
 ## Licensing 
 The licensing used for this project is MIT
 
- ## Live project
- The project can be viewed here: https://employee-directory-rmc.herokuapp.com/
-
-## API used:
-randomuser.me
-
-## Licensing 
-The licensing used for this project is MIT
-
 ## Contributions 
 Author: Rachael McIlhagga
 Twitter: @breadlikerach
